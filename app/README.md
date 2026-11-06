@@ -51,3 +51,7 @@ tools/            build-icons.mjs: generates the Material Symbols glyphs the app
 
 The same app with its own API, Firebase sign-in (email, Apple, Google), Stripe payments, ImageKit photo uploads and a
 restaurant team with roles: **[get the full-stack source code](https://buymeacoffee.com/reactbd/e/595519)**.
+
+## License
+
+MIT. See [LICENSE](../LICENSE).

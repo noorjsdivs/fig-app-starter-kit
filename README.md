@@ -151,6 +151,17 @@ platform:
 2. Compare your code with the chapter's checkpoint: the **What changed** link above shows every line the chapter added.
 3. Still stuck? Comment on the [video](https://youtu.be/dRi0hSMB4r8) with the chapter number and what you see.
 
+## License
+
+[MIT](LICENSE). Use the code to learn, and in your own projects, personal or commercial.
+
+The app's dependencies keep their own licenses:
+- Expo, React Native, Zustand and Reanimated: MIT;
+- Material Symbols: Apache 2.0;
+- the Outfit typeface: SIL Open Font License 1.1.
+
+The food photos load at runtime from Unsplash, under the [Unsplash License](https://unsplash.com/license).
+
 ## ReactBD
 
 [YouTube](https://www.youtube.com/@reactjsbd) · [Medium](https://medium.com/@reactbd) · [reactbd.com](https://reactbd.com)
