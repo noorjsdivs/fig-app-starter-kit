@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+
+# Expo and generated native projects
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+ios/
+android/
+
+# local env files, logs, caches
+.env*.local
+*.log
+*.tsbuildinfo
+.metro-health-check*
+
+# macOS
+.DS_Store
