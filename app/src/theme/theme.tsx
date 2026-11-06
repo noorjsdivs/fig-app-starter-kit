@@ -1,4 +1,7 @@
 import { createContext, type ReactNode, useContext, useMemo } from 'react';
+import { useColorScheme } from 'react-native';
+
+import { useApp } from '@/store/app-store';
 
 import { dark, light, type Palette, type ThemeName } from './tokens';
 
@@ -11,9 +14,10 @@ interface ThemeValue {
 const ThemeContext = createContext<ThemeValue>({ name: 'light', c: light, isDark: false });
 
 export function AppThemeProvider({ children }: { children: ReactNode }) {
-  // Light for now; once the store exists this reads the saved preference.
-  const name: ThemeName = 'light';
-  const value = useMemo<ThemeValue>(() => ({ name, c: name === 'light' ? light : dark, isDark: false }), [name]);
+  const pref = useApp((s) => s.theme);
+  const system = useColorScheme();
+  const name: ThemeName = pref === 'system' ? (system === 'dark' ? 'dark' : 'light') : pref;
+  const value = useMemo<ThemeValue>(() => ({ name, c: name === 'dark' ? dark : light, isDark: name === 'dark' }), [name]);
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 }
 
